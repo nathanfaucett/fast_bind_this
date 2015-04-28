@@ -1,5 +1,8 @@
+var isNumber = require("is_number");
+
+
 module.exports = function fastBindThis(callback, thisArg, length) {
-    switch (length || callback.length) {
+    switch (isNumber(length) ? length : callback.length) {
         case 0:
             return function bound() {
                 return callback.call(thisArg);

@@ -18,4 +18,15 @@ describe("fastBindThis", function() {
 
         assert.equal(testBound(0, 1, 2, 3), "test0123");
     });
+    it("should fallback to 0 if length is undefined", function() {
+        var testBound;
+
+        function test() {
+            return 10 + 5;
+        }
+
+        testBound = fastBindThis(test);
+
+        assert.equal(testBound(), 15);
+    });
 });
