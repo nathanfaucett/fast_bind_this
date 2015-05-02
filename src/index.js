@@ -1,7 +1,10 @@
 var isNumber = require("is_number");
 
 
-module.exports = function fastBindThis(callback, thisArg, length) {
+module.exports = fastBindThis;
+
+
+function fastBindThis(callback, thisArg, length) {
     switch ((isNumber(length) ? length : callback.length) || 0) {
         case 0:
             return function bound() {
@@ -28,4 +31,4 @@ module.exports = function fastBindThis(callback, thisArg, length) {
                 return callback.apply(thisArg, arguments);
             };
     }
-};
+}
