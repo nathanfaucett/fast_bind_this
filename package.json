@@ -7,6 +7,9 @@
     "url": "https://github.com/nathanfaucett/fast_bind_this.git"
   },
   "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [
     "fast_bind_this",
     "fast_bind_this.js"
