@@ -18,7 +18,7 @@ describe("fastBindThis", function() {
 
         assert.equal(testBound(0, 1, 2, 3), "test0123");
     });
-    it("should fallback to 0 if length is undefined", function() {
+    it("should fallback to apply all arguments if length is undefined or greater than 5", function() {
         var testBound;
 
         function test() {

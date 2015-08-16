@@ -5,7 +5,7 @@ module.exports = fastBindThis;
 
 
 function fastBindThis(callback, thisArg, length) {
-    switch ((isNumber(length) ? length : callback.length) || 0) {
+    switch (isNumber(length) ? length : (callback.length || -1)) {
         case 0:
             return function bound() {
                 return callback.call(thisArg);
