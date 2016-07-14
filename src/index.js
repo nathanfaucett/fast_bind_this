@@ -1,4 +1,4 @@
-var isNumber = require("is_number");
+var isNumber = require("@nathanfaucett/is_number");
 
 
 module.exports = fastBindThis;
